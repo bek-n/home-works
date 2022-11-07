@@ -13,16 +13,19 @@ class MyApp extends StatelessWidget {
         home: Container(
             color: Colors.black,
             child: Center(
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF01579B),
                         borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(20),
                             bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
                             topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
@@ -35,13 +38,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF2962FF),
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(20),
-                            topRight: Radius.circular(20))),
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'U',
@@ -53,13 +58,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF0288D1),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20))),
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'X',
@@ -72,13 +79,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF039BE5),
                         borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'A',
@@ -91,13 +100,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF29B6F6),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20))),
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'M',
@@ -110,13 +121,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF4FC3F7),
                         borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'M',
@@ -129,13 +142,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFF81D4FA),
                         borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20))),
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'A',
@@ -148,13 +163,15 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    height: 500,
-                    width: 50,
+                    height: 100,
+                    width: 100,
                     decoration: const BoxDecoration(
                         color: Color(0xFFB3E5FC),
                         borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
                             topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20))),
+                            topLeft: Radius.circular(20))),
                     child: const Center(
                       child: Text(
                         'D',
