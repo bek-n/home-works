@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '10 November. Scaffold/1-vazifa.dart';
+
+import '10 November. Scaffold/2-vazifa.dart';
 
 void main() {
-  runApp(const one());
+  runApp(const two());
 }
