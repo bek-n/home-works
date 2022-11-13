@@ -39,6 +39,7 @@ class one extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(top: 30),
               child: TextFormField(
+                
                 keyboardType: TextInputType.number,
                 style: const TextStyle(color: Colors.black, fontSize: 30),
                 decoration: InputDecoration(
