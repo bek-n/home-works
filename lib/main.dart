@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 
-import '14 November. Alisher Navoiy/2nd page.dart';
-import '14 November. Alisher Navoiy/3rd page.dart';
+
+import '15 November. Scroll/ligh_mode menu.dart';
+import '15 November. Scroll/light mode.dart';
 
 void main() {
-  runApp(const thirdPage());
+  runApp(const menuLightMode());
 }
