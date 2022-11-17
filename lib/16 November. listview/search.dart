@@ -7,10 +7,10 @@ class searchpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xffEDF3F3),
+        backgroundColor: const Color(0xffEDF3F3),
         body: ListView(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(right: 85, left: 24, top: 49),
               child: TextField(
                 keyboardType: TextInputType.name,
@@ -23,7 +23,7 @@ class searchpage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Padding(
                   padding: EdgeInsets.only(left: 24, top: 19),
                   child: Text(
@@ -50,108 +50,115 @@ class searchpage extends StatelessWidget {
                 child: ListView(
                   children: [
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://www.pngitem.com/pimgs/m/111-1114839_circle-people-icon-flat-png-avatar-icon-transparent.png')),
-                      title: Text('Jacob Jones'),
-                      subtitle: Text('Computer Graphics Animator at Draw...'),
+                      title: const Text('Jacob Jones'),
+                      subtitle:
+                          const Text('Computer Graphics Animator at Draw...'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xffEDF3F3),
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Follow')),
+                        child: const Center(child: Text('Follow')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://thumbs.dreamstime.com/b/young-afro-man-avatar-character-male-face-portrait-cartoon-person-vector-illustration-young-afro-man-avatar-character-male-face-100786112.jpg')),
-                      title: Text('Robert Fox'),
-                      subtitle: Text('💻 Growth Hacker at Abine Blur LLC'),
+                      title: const Text('Robert Fox'),
+                      subtitle:
+                          const Text('💻 Growth Hacker at Abine Blur LLC'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Following')),
+                        child: const Center(child: Text('Following')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://cdn4.vectorstock.com/i/1000x1000/02/13/beautiful-woman-avatar-vector-15490213.jpg')),
-                      title: Text('Courtney Henry'),
-                      subtitle: Text('💾 Database Administrator, Motivator...'),
+                      title: const Text('Courtney Henry'),
+                      subtitle:
+                          const Text('💾 Database Administrator, Motivator...'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xffEDF3F3),
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Follow')),
+                        child: const Center(child: Text('Follow')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://cdn3.vectorstock.com/i/1000x1000/31/77/beautiful-latin-woman-avatar-character-icon-vector-33983177.jpg')),
-                      title: Text('Amely Clark'),
-                      subtitle: Text('Computer Graphics Animator at Draw...'),
+                      title: const Text('Amely Clark'),
+                      subtitle:
+                          const Text('Computer Graphics Animator at Draw...'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xffEDF3F3),
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Follow')),
+                        child: const Center(child: Text('Follow')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://www.kindpng.com/picc/m/645-6456180_people-icon-circle-persona-icon-hd-png-download.png')),
-                      title: Text('Robert Fox'),
-                      subtitle: Text('💻 Growth Hacker at Abine Blur LLC'),
+                      title: const Text('Robert Fox'),
+                      subtitle:
+                          const Text('💻 Growth Hacker at Abine Blur LLC'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Following')),
+                        child: const Center(child: Text('Following')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://t3.ftcdn.net/jpg/03/04/13/04/360_F_304130422_DJEMUwnUEYk42G3GglBsDbUmc3cnSTIW.jpg')),
-                      title: Text('Robert Fox'),
-                      subtitle: Text('💻 Growth Hacker at Abine Blur LLC'),
+                      title: const Text('Robert Fox'),
+                      subtitle:
+                          const Text('💻 Growth Hacker at Abine Blur LLC'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Following')),
+                        child: const Center(child: Text('Following')),
                       ),
                     ),
                     ListTile(
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                           backgroundImage: NetworkImage(
                               'https://www.kindpng.com/picc/m/645-6456180_people-icon-circle-persona-icon-hd-png-download.png')),
-                      title: Text('Robert Fox'),
-                      subtitle: Text('💻 Growth Hacker at Abine Blur LLC'),
+                      title: const Text('Robert Fox'),
+                      subtitle:
+                          const Text('💻 Growth Hacker at Abine Blur LLC'),
                       trailing: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0xffEDF3F3),
                             borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 24,
                         width: 66,
-                        child: Center(child: Text('Follow')),
+                        child: const Center(child: Text('Follow')),
                       ),
                     ),
                   ],
@@ -160,7 +167,7 @@ class searchpage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Padding(
                   padding: EdgeInsets.only(left: 24, top: 19),
                   child: Text(
@@ -181,7 +188,7 @@ class searchpage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 300,
+              height: 400,
               child: Container(
                 color: Colors.white,
                 child: ListView(
@@ -191,13 +198,266 @@ class searchpage extends StatelessWidget {
                           children: [
                             Positioned(
                                 child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://avatarfiles.alphacoders.com/183/183428.jpg'),
                               ),
                               height: 36,
                               width: 36,
+                              decoration: const BoxDecoration(
+                                  color: Colors.red, shape: BoxShape.circle),
+                            )),
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '+46',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
+                              height: 36,
+                              width: 36,
                               decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  color: Colors.black,
+                                  shape: BoxShape.circle),
+                            )
+                          ],
+                        ),
+                        title: const Text('Christmas corporate party dis...'),
+                        subtitle: Row(
+                          children: [
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '30 min',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 10),
+                                ),
+                              ),
+                              width: 38,
+                              height: 14,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xffF2994A),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20))),
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.only(left: 11),
+                                child: Text('Mon, Dec 20, 01:00 AM'))
+                          ],
+                        ),
+                        trailing: Container(
+                          decoration: const BoxDecoration(
+                              color: Color(0xffEDF3F3),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          height: 24,
+                          width: 66,
+                          child: const Center(child: Text('Join')),
+                        )),
+                    ListTile(
+                        leading: Stack(
+                          children: [
+                            Positioned(
+                                child: Container(
+                              child: const CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    'https://avatarfiles.alphacoders.com/183/183495.jpg'),
+                              ),
+                              height: 36,
+                              width: 36,
+                              decoration: const BoxDecoration(
+                                  color: Colors.red, shape: BoxShape.circle),
+                            )),
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '+5',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
+                              height: 36,
+                              width: 36,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  color: Colors.black,
+                                  shape: BoxShape.circle),
+                            )
+                          ],
+                        ),
+                        title: const Text('Smokers Club'),
+                        subtitle: Row(
+                          children: [
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '30 min',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 10),
+                                ),
+                              ),
+                              width: 38,
+                              height: 14,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xff7BE95A),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20))),
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.only(left: 11),
+                                child: Text('Mon, Dec 20, 01:00 AM'))
+                          ],
+                        ),
+                        trailing: Container(
+                          decoration: const BoxDecoration(
+                              color: Color(0xffEDF3F3),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          height: 24,
+                          width: 66,
+                          child: const Center(child: Text('Join')),
+                        )),
+                    ListTile(
+                        leading: Stack(
+                          children: [
+                            Positioned(
+                                child: Container(
+                              child: const CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    'https://avatarfiles.alphacoders.com/229/229167.jpg'),
+                              ),
+                              height: 36,
+                              width: 36,
+                              decoration: const BoxDecoration(
+                                  color: Colors.red, shape: BoxShape.circle),
+                            )),
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '+12',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
+                              height: 36,
+                              width: 36,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  color: Colors.black,
+                                  shape: BoxShape.circle),
+                            )
+                          ],
+                        ),
+                        title: const Text('Tips & tricks  of remote work'),
+                        subtitle: Row(
+                          children: [
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '30 min',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 10),
+                                ),
+                              ),
+                              width: 38,
+                              height: 14,
+                              decoration: const BoxDecoration(
+                                  color: Color(0xffEB5757),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20))),
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.only(left: 11),
+                                child: Text('Mon, Dec 20, 01:00 AM'))
+                          ],
+                        ),
+                        trailing: Container(
+                          decoration: const BoxDecoration(
+                              color: Color(0xffEDF3F3),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          height: 24,
+                          width: 66,
+                          child: const Center(child: Text('Join')),
+                        )),
+                    ListTile(
+                        leading: Stack(
+                          children: [
+                            Positioned(
+                                child: Container(
+                              child: const CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    'https://images.hdqwalls.com/wallpapers/anastasia-scheglova-2019-zt.jpg'),
+                              ),
+                              height: 36,
+                              width: 36,
+                              decoration: const BoxDecoration(
+                                  color: Colors.red, shape: BoxShape.circle),
+                            )),
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '+5',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
+                              height: 36,
+                              width: 36,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  color: Colors.black,
+                                  shape: BoxShape.circle),
+                            )
+                          ],
+                        ),
+                        title: const Text('Design and its future'),
+                        subtitle: Row(
+                          children: [
+                            Container(
+                              child: const Center(
+                                child: Text(
+                                  '30 min',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 10),
+                                ),
+                              ),
+                              width: 38,
+                              height: 14,
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  color: Color(0xff9B51E0),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20))),
+                            ),
+                            const Padding(
+                                padding: EdgeInsets.only(left: 11),
+                                child: Text('Mon, Dec 20, 01:00 AM'))
+                          ],
+                        ),
+                        trailing: Container(
+                          decoration: const BoxDecoration(
+                              color: Color(0xffEDF3F3),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(8))),
+                          height: 24,
+                          width: 66,
+                          child: const Center(child: Text('Join')),
+                        )),
+                    ListTile(
+                        leading: Stack(
+                          children: [
+                            Positioned(
+                                child: Container(
+                              child: const CircleAvatar(
+                                backgroundImage: NetworkImage(
+                                    'https://avatarfiles.alphacoders.com/183/183428.jpg'),
+                              ),
+                              height: 36,
+                              width: 36,
+                              decoration: const BoxDecoration(
                                   color: Colors.red, shape: BoxShape.circle),
                             )),
                             Container(
@@ -211,15 +471,17 @@ class searchpage extends StatelessWidget {
                               height: 36,
                               width: 36,
                               decoration: BoxDecoration(
-                                  color: Colors.black, shape: BoxShape.circle),
+                                  border: Border.all(color: Colors.white),
+                                  color: Colors.black,
+                                  shape: BoxShape.circle),
                             )
                           ],
                         ),
-                        title: Text('Christmas corporate party dis...'),
+                        title: const Text('Christmas corporate party dis...'),
                         subtitle: Row(
                           children: [
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '30 min',
                                   style: TextStyle(
@@ -228,59 +490,59 @@ class searchpage extends StatelessWidget {
                               ),
                               width: 38,
                               height: 14,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xffF2994A),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
                             ),
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(left: 11),
                                 child: Text('Mon, Dec 20, 01:00 AM'))
                           ],
                         ),
                         trailing: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color(0xffEDF3F3),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8))),
                           height: 24,
                           width: 66,
-                          child: Center(child: Text('Join')),
+                          child: const Center(child: Text('Join')),
                         )),
                     ListTile(
                         leading: Stack(
                           children: [
                             Positioned(
                                 child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://avatarfiles.alphacoders.com/183/183495.jpg'),
                               ),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.red, shape: BoxShape.circle),
                             )),
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '+5',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
-                              margin: EdgeInsets.only(top: 20, left: 15),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.black, shape: BoxShape.circle),
                             )
                           ],
                         ),
-                        title: Text('Smokers Club'),
+                        title: const Text('Smokers Club'),
                         subtitle: Row(
                           children: [
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '30 min',
                                   style: TextStyle(
@@ -289,59 +551,59 @@ class searchpage extends StatelessWidget {
                               ),
                               width: 38,
                               height: 14,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xff7BE95A),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
                             ),
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(left: 11),
                                 child: Text('Mon, Dec 20, 01:00 AM'))
                           ],
                         ),
                         trailing: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color(0xffEDF3F3),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8))),
                           height: 24,
                           width: 66,
-                          child: Center(child: Text('Join')),
+                          child: const Center(child: Text('Join')),
                         )),
                     ListTile(
                         leading: Stack(
                           children: [
                             Positioned(
                                 child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://avatarfiles.alphacoders.com/229/229167.jpg'),
                               ),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.red, shape: BoxShape.circle),
                             )),
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '+12',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
-                              margin: EdgeInsets.only(top: 20, left: 15),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.black, shape: BoxShape.circle),
                             )
                           ],
                         ),
-                        title: Text('Tips & tricks  of remote work'),
+                        title: const Text('Tips & tricks  of remote work'),
                         subtitle: Row(
                           children: [
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '30 min',
                                   style: TextStyle(
@@ -350,59 +612,59 @@ class searchpage extends StatelessWidget {
                               ),
                               width: 38,
                               height: 14,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xffEB5757),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
                             ),
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(left: 11),
                                 child: Text('Mon, Dec 20, 01:00 AM'))
                           ],
                         ),
                         trailing: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color(0xffEDF3F3),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8))),
                           height: 24,
                           width: 66,
-                          child: Center(child: Text('Join')),
+                          child: const Center(child: Text('Join')),
                         )),
                     ListTile(
                         leading: Stack(
                           children: [
                             Positioned(
                                 child: Container(
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundImage: NetworkImage(
                                     'https://images.hdqwalls.com/wallpapers/anastasia-scheglova-2019-zt.jpg'),
                               ),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.red, shape: BoxShape.circle),
                             )),
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '+5',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
-                              margin: EdgeInsets.only(top: 20, left: 15),
+                              margin: const EdgeInsets.only(top: 20, left: 15),
                               height: 36,
                               width: 36,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Colors.black, shape: BoxShape.circle),
                             )
                           ],
                         ),
-                        title: Text('Design and its future'),
+                        title: const Text('Design and its future'),
                         subtitle: Row(
                           children: [
                             Container(
-                              child: Center(
+                              child: const Center(
                                 child: Text(
                                   '30 min',
                                   style: TextStyle(
@@ -411,24 +673,24 @@ class searchpage extends StatelessWidget {
                               ),
                               width: 38,
                               height: 14,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                   color: Color(0xff9B51E0),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20))),
                             ),
-                            Padding(
+                            const Padding(
                                 padding: EdgeInsets.only(left: 11),
                                 child: Text('Mon, Dec 20, 01:00 AM'))
                           ],
                         ),
                         trailing: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Color(0xffEDF3F3),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(8))),
                           height: 24,
                           width: 66,
-                          child: Center(child: Text('Join')),
+                          child: const Center(child: Text('Join')),
                         ))
                   ],
                 ),
