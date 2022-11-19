@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '19November/2nd home work.dart';
 import '19November/Main Page.dart.dart';
 
 // import '17 November Wrap, Grid view/1.dart';
@@ -7,16 +8,16 @@ import '19November/Main Page.dart.dart';
 // import '17 November. Alisher nanoiy page to page/2nd page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const homeWork2());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: classs(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: classs(),
+//     );
+//   }
+// }
