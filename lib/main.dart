@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 
-import '22 November. /2nd page.dart';
+
+import '22 November. /ikki.dart';
+import 'mASHQ.dart';
 
 
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: secondPage(),
+      home: Mashq(),
     );
   }
 }
