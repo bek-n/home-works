@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_works/second.page.dart';
+
 
 import '4page.dart';
 
@@ -37,7 +37,7 @@ class Mashq extends StatelessWidget {
                   // Positioned(top: 300, child: Image.asset('assets/Group1.png'))
                 ],
               ),
-              seconddd(),
+             
               fouthh()
             ],
           )),
