@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 
 import '23 November/instalike.dart';
+import '25 November/main page.dart';
 
 
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: homework(),
+      home: FirstPage(),
     );
   }
 }
