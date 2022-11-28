@@ -25,7 +25,7 @@ List<brands> datas = [
 List<cardInfo> cards = [
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xffFBC2EB), Color(0xffA6C1EE)]),
-      name: 'Evelyn  ',
+      name: 'Evelyn',
       bankInfo: 'AW BANK UNI 234-46589-000',
       surname: 'Smith'),
   cardInfo(
@@ -35,17 +35,17 @@ List<cardInfo> cards = [
       bankInfo: 'AW BANK UNI 643-46729-777'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xffE0C3FC), Color(0xff8EC5FC)]),
-      surname: ' Wilson ',
+      surname: 'Wilson ',
       name: 'Oliver',
       bankInfo: 'AW BANK UNI 535-5729-429'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xffEBBBA7), Color(0xffCFC7F8)]),
-      surname: ' Baker',
+      surname: 'Baker',
       name: 'Sophie',
       bankInfo: 'AW BANK UNI 212-21729-555'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xff8FEFE9), Color(0xffDBBAEF)]),
-      surname: ' William',
+      surname: 'William',
       name: 'Charlie',
       bankInfo: 'AW BANK UNI 343-39225-333'),
   cardInfo(
@@ -60,17 +60,17 @@ List<cardInfo> cards = [
       bankInfo: 'AW BANK UNI 643-46729-777'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xffE0C3FC), Color(0xff8EC5FC)]),
-      surname: ' Wilson ',
+      surname: 'Wilson ',
       name: 'Oliver',
       bankInfo: 'AW BANK UNI 535-5729-429'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xffEBBBA7), Color(0xffCFC7F8)]),
-      surname: ' Baker',
+      surname: 'Baker',
       name: 'Sophie',
       bankInfo: 'AW BANK UNI 212-21729-555'),
   cardInfo(
       ranglar: LinearGradient(colors: [Color(0xff8FEFE9), Color(0xffDBBAEF)]),
-      surname: ' William',
+      surname: 'William',
       name: 'Charlie',
       bankInfo: 'AW BANK UNI 343-39225-333'),
 ];
@@ -122,7 +122,7 @@ class _tranferPageState extends State<tranferPage> {
             ),
           ),
           SizedBox(
-            height: 125,
+            height: 130,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: datas.length,
@@ -136,8 +136,8 @@ class _tranferPageState extends State<tranferPage> {
                             decoration: BoxDecoration(
                                 boxShadow: [
                                   BoxShadow(
-                                      blurRadius: 10,
-                                      color: Color.fromARGB(255, 63, 60, 60),
+                                      blurRadius: 0,
+                                      color: Color.fromARGB(255, 183, 180, 180),
                                       offset: Offset(0, 4))
                                 ],
                                 borderRadius:
