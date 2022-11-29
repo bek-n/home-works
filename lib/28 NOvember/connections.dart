@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_works/28%20NOvember/home%20page.dart';
+import 'package:home_works/28%20NOvember/search%20page.dart';
 
 class connections extends StatefulWidget {
   const connections({super.key});
@@ -9,7 +10,7 @@ class connections extends StatefulWidget {
 }
 
 int a = 0;
-List<Widget> lst = [homePage()];
+List<Widget> lst = [homePage(), SearcPage()];
 
 class _connectionsState extends State<connections> {
   @override
@@ -17,11 +18,13 @@ class _connectionsState extends State<connections> {
     return Scaffold(
       body: lst[a],
       bottomNavigationBar: BottomNavigationBar(
+        
           currentIndex: a,
           onTap: (value) {
             a = value;
             setState(() {});
           },
+          selectedIconTheme: IconThemeData(size: 50),
           selectedItemColor: Colors.black,
           type: BottomNavigationBarType.fixed,
           items: [
