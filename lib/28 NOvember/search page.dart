@@ -13,7 +13,7 @@ class SearcPage extends StatefulWidget {
 List<data2> infos2 = [
   data2(
       logo:
-          'https://w7.pngwing.com/pngs/492/902/png-transparent-vuejs-original-wordmark-logo-icon.png',
+          'assets/vuejs.png',
       text: 'Vue js',
       title: 'Description: All can be perfect in math....',
       price: 'Price: \$50',
@@ -22,7 +22,7 @@ List<data2> infos2 = [
       level: 'Beginner'),
   data2(
       logo:
-          'https://w7.pngwing.com/pngs/79/518/png-transparent-js-react-js-logo-react-react-native-logos-icon-thumbnail.png',
+          'assets/react.png',
       text: 'React js',
       title: 'Description: All can be perfect in any....',
       price: 'Price: \$80',
@@ -31,16 +31,16 @@ List<data2> infos2 = [
       level: 'All Level'),
   data2(
       logo:
-          'https://w7.pngwing.com/pngs/640/199/png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png',
+          'assets/js.png',
       text: 'Javascript',
-      title: ' Description: All can be perfect in prog....',
+      title: ' Description: All can be perfect in web....',
       price: 'Price: Free',
       rating: '4.0',
       name: 'By Sarah William',
       level: 'All Level'),
   data2(
       logo:
-          'https://e7.pngegg.com/pngimages/328/221/png-clipart-c-programming-language-logo-microsoft-visual-studio-net-framework-javascript-icon-purple-logo.png',
+          'assets/C.png',
       text: 'C#',
       title: 'Description: All can be perfect in any....',
       price: 'Price: \$80',
@@ -49,13 +49,31 @@ List<data2> infos2 = [
       level: 'All Level'),
   data2(
       logo:
-          'https://w1.pngwing.com/pngs/1002/616/png-transparent-python-logo-programming-language-computer-programming-professional-python-highlevel-programming-language-scripting-language-data-type-php.png',
+          'assets/python.png',
       text: 'Python',
       title: 'Description: All can be perfect in math....',
       price: 'Price: \$50',
       rating: '5.0',
       name: 'By Sarah William',
       level: 'Beginner'),
+  data2(
+      logo:
+          'assets/flutter.png',
+      text: 'Flutter',
+      title: 'Description: Flutter can be perfect in mobile....',
+      price: 'Price: \$50',
+      rating: '5.0',
+      name: 'By Sarah William',
+      level: 'Beginner'),
+  data2(
+      logo:
+          'assets/go.png',
+      text: 'GO',
+      title: 'Description: Go can be perfect in backend....',
+      price: 'Price: \$50',
+      rating: '5.0',
+      name: 'By Sarah William',
+      level: 'Beginner'),    
 ];
 
 class _SearcPageState extends State<SearcPage> {
@@ -333,7 +351,7 @@ class _SearcPageState extends State<SearcPage> {
                                               child: Padding(
                                                 padding: const EdgeInsets.only(
                                                     left: 13, right: 12.5),
-                                                child: Image.network(
+                                                child: Image.asset(
                                                     infos2[index].logo),
                                               ),
                                             ),
