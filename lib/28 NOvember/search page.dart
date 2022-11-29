@@ -10,10 +10,13 @@ class SearcPage extends StatefulWidget {
   State<SearcPage> createState() => _SearcPageState();
 }
 
+bool isSeraching = false;
+
+List searchingDatas = [];
+
 List<data2> infos2 = [
   data2(
-      logo:
-          'assets/vuejs.png',
+      logo: 'assets/vuejs.png',
       text: 'Vue js',
       title: 'Description: All can be perfect in math....',
       price: 'Price: \$50',
@@ -21,8 +24,7 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'Beginner'),
   data2(
-      logo:
-          'assets/react.png',
+      logo: 'assets/react.png',
       text: 'React js',
       title: 'Description: All can be perfect in any....',
       price: 'Price: \$80',
@@ -30,8 +32,7 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'All Level'),
   data2(
-      logo:
-          'assets/js.png',
+      logo: 'assets/js.png',
       text: 'Javascript',
       title: ' Description: All can be perfect in web....',
       price: 'Price: Free',
@@ -39,8 +40,7 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'All Level'),
   data2(
-      logo:
-          'assets/C.png',
+      logo: 'assets/C.png',
       text: 'C#',
       title: 'Description: All can be perfect in any....',
       price: 'Price: \$80',
@@ -48,8 +48,7 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'All Level'),
   data2(
-      logo:
-          'assets/python.png',
+      logo: 'assets/python.png',
       text: 'Python',
       title: 'Description: All can be perfect in math....',
       price: 'Price: \$50',
@@ -57,8 +56,7 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'Beginner'),
   data2(
-      logo:
-          'assets/flutter.png',
+      logo: 'assets/flutter.png',
       text: 'Flutter',
       title: 'Description: Flutter can be perfect in mobile....',
       price: 'Price: \$50',
@@ -66,14 +64,13 @@ List<data2> infos2 = [
       name: 'By Sarah William',
       level: 'Beginner'),
   data2(
-      logo:
-          'assets/go.png',
+      logo: 'assets/go.png',
       text: 'GO',
       title: 'Description: Go can be perfect in backend....',
       price: 'Price: \$50',
       rating: '5.0',
       name: 'By Sarah William',
-      level: 'Beginner'),    
+      level: 'Beginner'),
 ];
 
 class _SearcPageState extends State<SearcPage> {
@@ -131,6 +128,18 @@ class _SearcPageState extends State<SearcPage> {
                         padding:
                             const EdgeInsets.only(left: 24, right: 25, top: 28),
                         child: TextFormField(
+                          onChanged: (value) {
+                            searchingDatas.clear();
+                            infos2.forEach((element) {
+                              if (element.text
+                                  .toUpperCase()
+                                  .contains(value.toUpperCase())) {
+                                searchingDatas.add(element);
+                              }
+                            });
+                            isSeraching = true;
+                            setState(() {});
+                          },
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
                               suffixIcon: Icon(
@@ -158,132 +167,29 @@ class _SearcPageState extends State<SearcPage> {
                         ),
                         child: Wrap(
                           children: [
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Game development',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
+                            ...infos2.map(
+                              (e) => Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 7.5, horizontal: 12),
+                                  decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(30)),
+                                      gradient: LinearGradient(
+                                          begin: Alignment.centerLeft,
+                                          end: Alignment.bottomLeft,
+                                          colors: [
+                                            Color(0xff21C8F6),
+                                            Color(0xff637BFF)
+                                          ])),
+                                  child: Text(
+                                    e.text,
+                                    style: TextStyle(color: Color(0xffFCFCFF)),
+                                  ),
+                                ),
                               ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Finance',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Python',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Programming',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Swift',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Vuejs',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 7.5, horizontal: 12),
-                              decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.centerLeft,
-                                      end: Alignment.bottomLeft,
-                                      colors: [
-                                        Color(0xff21C8F6),
-                                        Color(0xff637BFF)
-                                      ])),
-                              child: Text(
-                                'Reactjs',
-                                style: TextStyle(color: Color(0xffFCFCFF)),
-                              ),
-                            ),
+                            )
                           ],
                         ),
                       ),
@@ -318,183 +224,423 @@ class _SearcPageState extends State<SearcPage> {
                         ),
                       ),
                       Expanded(
-                        child: ListView.builder(
-                            padding:
-                                EdgeInsets.only(top: 12, right: 29, left: 21),
-                            itemCount: infos2.length,
-                            itemBuilder: ((context, index) => Column(
-                                  children: [
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(bottom: 12),
-                                      child: Container(
-                                        padding: EdgeInsets.only(
-                                            top: 15.5, bottom: 15.5, left: 15),
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(20)),
-                                            color: Color(0xffF6F6F6)),
-                                        child: Row(
-                                          children: [
-                                            Container(
-                                              height: 75,
-                                              width: 75,
+                          child: isSeraching
+                              ? ListView.builder(
+                                  padding: EdgeInsets.only(
+                                      top: 12, right: 29, left: 21),
+                                  itemCount: searchingDatas.length,
+                                  itemBuilder: ((context, index) => Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 12),
+                                            child: Container(
+                                              padding: EdgeInsets.only(
+                                                  top: 15.5,
+                                                  bottom: 15.5,
+                                                  left: 15),
                                               decoration: BoxDecoration(
                                                   borderRadius:
                                                       BorderRadius.all(
-                                                          Radius.circular(15)),
-                                                  gradient: LinearGradient(
-                                                      colors: [
-                                                        Color(0xff21C8F6),
-                                                        Color(0xff637BFF)
-                                                      ])),
-                                              child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    left: 13, right: 12.5),
-                                                child: Image.asset(
-                                                    infos2[index].logo),
+                                                          Radius.circular(20)),
+                                                  color: Color(0xffF6F6F6)),
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    height: 75,
+                                                    width: 75,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius
+                                                                    .circular(
+                                                                        15)),
+                                                        gradient:
+                                                            LinearGradient(
+                                                                colors: [
+                                                              Color(0xff21C8F6),
+                                                              Color(0xff637BFF)
+                                                            ])),
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 13,
+                                                              right: 12.5),
+                                                      child: Image.asset(
+                                                          searchingDatas[index]
+                                                              .logo),
+                                                    ),
+                                                  ),
+                                                  Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 20,
+                                                                right: 80),
+                                                        child: Text(
+                                                          searchingDatas[index]
+                                                              .text,
+                                                          style: TextStyle(
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 20,
+                                                                right: 15),
+                                                        child: Text(
+                                                          searchingDatas[index]
+                                                              .title,
+                                                          style: TextStyle(
+                                                              fontSize: 10,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              color: Color(
+                                                                  0xff91919F)),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 6,
+                                                                left: 20,
+                                                                right: 140,
+                                                                bottom: 7),
+                                                        child: Text(
+                                                          infos2[index].price,
+                                                          style: TextStyle(
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                              color:
+                                                                  Colors.black),
+                                                        ),
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left:
+                                                                        21.08),
+                                                            child: Icon(
+                                                              Icons.star,
+                                                              color: Color(
+                                                                  0xffFFC960),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 6.08),
+                                                            child: Text(
+                                                              searchingDatas[
+                                                                      index]
+                                                                  .rating,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Container(
+                                                              height: 3,
+                                                              width: 3,
+                                                              decoration: BoxDecoration(
+                                                                  color: Color(
+                                                                      0xff91919F),
+                                                                  shape: BoxShape
+                                                                      .circle),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Text(
+                                                              searchingDatas[
+                                                                      index]
+                                                                  .name,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Color(
+                                                                      0xff91919F)),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Container(
+                                                              height: 3,
+                                                              width: 3,
+                                                              decoration: BoxDecoration(
+                                                                  color: Color(
+                                                                      0xff91919F),
+                                                                  shape: BoxShape
+                                                                      .circle),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Text(
+                                                              searchingDatas[
+                                                                      index]
+                                                                  .level,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Color(
+                                                                      0xff91919F)),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      )
+                                                    ],
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 20, right: 80),
-                                                  child: Text(
-                                                    infos2[index].text,
-                                                    style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.w700),
+                                          )
+                                        ],
+                                      )),
+                                )
+                              : ListView.builder(
+                                  padding: EdgeInsets.only(
+                                      top: 12, right: 29, left: 21),
+                                  itemCount: infos2.length,
+                                  itemBuilder: ((context, index) => Column(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 12),
+                                            child: Container(
+                                              padding: EdgeInsets.only(
+                                                  top: 15.5,
+                                                  bottom: 15.5,
+                                                  left: 15),
+                                              decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(20)),
+                                                  color: Color(0xffF6F6F6)),
+                                              child: Row(
+                                                children: [
+                                                  Container(
+                                                    height: 75,
+                                                    width: 75,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius.all(
+                                                                Radius
+                                                                    .circular(
+                                                                        15)),
+                                                        gradient:
+                                                            LinearGradient(
+                                                                colors: [
+                                                              Color(0xff21C8F6),
+                                                              Color(0xff637BFF)
+                                                            ])),
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 13,
+                                                              right: 12.5),
+                                                      child: Image.asset(
+                                                          infos2[index].logo),
+                                                    ),
                                                   ),
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 20, right: 15),
-                                                  child: Text(
-                                                    infos2[index].title,
-                                                    style: TextStyle(
-                                                        fontSize: 10,
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        color:
-                                                            Color(0xff91919F)),
+                                                  Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 20,
+                                                                right: 80),
+                                                        child: Text(
+                                                          infos2[index].text,
+                                                          style: TextStyle(
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 20,
+                                                                right: 15),
+                                                        child: Text(
+                                                          infos2[index].title,
+                                                          style: TextStyle(
+                                                              fontSize: 10,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              color: Color(
+                                                                  0xff91919F)),
+                                                        ),
+                                                      ),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                top: 6,
+                                                                left: 20,
+                                                                right: 140,
+                                                                bottom: 7),
+                                                        child: Text(
+                                                          infos2[index].price,
+                                                          style: TextStyle(
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                              color:
+                                                                  Colors.black),
+                                                        ),
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left:
+                                                                        21.08),
+                                                            child: Icon(
+                                                              Icons.star,
+                                                              color: Color(
+                                                                  0xffFFC960),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 6.08),
+                                                            child: Text(
+                                                              infos2[index]
+                                                                  .rating,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Container(
+                                                              height: 3,
+                                                              width: 3,
+                                                              decoration: BoxDecoration(
+                                                                  color: Color(
+                                                                      0xff91919F),
+                                                                  shape: BoxShape
+                                                                      .circle),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Text(
+                                                              infos2[index]
+                                                                  .name,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Color(
+                                                                      0xff91919F)),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Container(
+                                                              height: 3,
+                                                              width: 3,
+                                                              decoration: BoxDecoration(
+                                                                  color: Color(
+                                                                      0xff91919F),
+                                                                  shape: BoxShape
+                                                                      .circle),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    left: 5),
+                                                            child: Text(
+                                                              infos2[index]
+                                                                  .level,
+                                                              style: TextStyle(
+                                                                  fontSize: 10,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400,
+                                                                  color: Color(
+                                                                      0xff91919F)),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      )
+                                                    ],
                                                   ),
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          top: 6,
-                                                          left: 20,
-                                                          right: 140,
-                                                          bottom: 7),
-                                                  child: Text(
-                                                    infos2[index].price,
-                                                    style: TextStyle(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                        color: Colors.black),
-                                                  ),
-                                                ),
-                                                Row(
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 21.08),
-                                                      child: Icon(
-                                                        Icons.star,
-                                                        color:
-                                                            Color(0xffFFC960),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 6.08),
-                                                      child: Text(
-                                                        infos2[index].rating,
-                                                        style: TextStyle(
-                                                            fontSize: 10,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w700),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 5),
-                                                      child: Container(
-                                                        height: 3,
-                                                        width: 3,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                                color: Color(
-                                                                    0xff91919F),
-                                                                shape: BoxShape
-                                                                    .circle),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 5),
-                                                      child: Text(
-                                                        infos2[index].name,
-                                                        style: TextStyle(
-                                                            fontSize: 10,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            color: Color(
-                                                                0xff91919F)),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 5),
-                                                      child: Container(
-                                                        height: 3,
-                                                        width: 3,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                                color: Color(
-                                                                    0xff91919F),
-                                                                shape: BoxShape
-                                                                    .circle),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsets.only(
-                                                              left: 5),
-                                                      child: Text(
-                                                        infos2[index].level,
-                                                        style: TextStyle(
-                                                            fontSize: 10,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            color: Color(
-                                                                0xff91919F)),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                )
-                                              ],
+                                                ],
+                                              ),
                                             ),
-                                          ],
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ))),
-                      )
+                                          )
+                                        ],
+                                      )),
+                                ))
                     ],
                   ),
                 ),
