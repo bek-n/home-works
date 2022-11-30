@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 
 import '28 NOvember/connections.dart';
+import '28 NOvember/course-details-page.dart';
 
 
 
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: connections(),
+      // home: detailsPage()
+     home: connections(),
     );
   }
 }
