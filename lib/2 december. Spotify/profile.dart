@@ -6,8 +6,12 @@ import 'package:home_works/14%20November.%20Alisher%20Navoiy/3rd%20page.dart';
 import 'data/model.dart';
 
 class ProfilePage extends StatefulWidget {
-  final String Name, Email;
-  ProfilePage({super.key, required this.Email, required this.Name});
+  final String Name, Email, Account;
+  ProfilePage(
+      {super.key,
+      required this.Email,
+      required this.Name,
+      required this.Account});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -137,8 +141,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     width: 93,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(
-                                'https://cdn.shopify.com/s/files/1/1876/4703/articles/shutterstock_1143664235_4120x.jpg?v=1591196204'),
+                            image: NetworkImage(widget.Account),
                             fit: BoxFit.cover),
                         color: Colors.white,
                         shape: BoxShape.circle),
@@ -287,13 +290,210 @@ class _ProfilePageState extends State<ProfilePage> {
                                               fontWeight: FontWeight.w400,
                                               color: Color(0xffE3E3E3))),
                                       Padding(
-                                        padding:
-                                            const EdgeInsets.only(left: 37),
-                                        child: Icon(
-                                          Icons.more_horiz,
-                                          color: Color(0xffE3E3E3),
-                                        ),
-                                      )
+                                          padding:
+                                              const EdgeInsets.only(left: 30),
+                                          child: IconButton(
+                                            onPressed: (() {
+                                              showDialog(
+                                                  context: context,
+                                                  builder: ((context) => Dialog(
+                                                        backgroundColor:
+                                                            Colors.transparent,
+                                                        child: Container(
+                                                          height: MediaQuery.of(
+                                                                          context)
+                                                                      .size
+                                                                      .height /
+                                                                  7 +
+                                                              48,
+                                                          width: MediaQuery.of(
+                                                                          context)
+                                                                      .size
+                                                                      .width /
+                                                                  7 +
+                                                              48,
+                                                          decoration: BoxDecoration(
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      90,
+                                                                      88,
+                                                                      88),
+                                                              borderRadius: BorderRadius
+                                                                  .all(Radius
+                                                                      .circular(
+                                                                          30))),
+                                                          child: Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 15,
+                                                                        left:
+                                                                            15),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceBetween,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Text(
+                                                                      'Get info',
+                                                                      style: TextStyle(
+                                                                          color: Colors
+                                                                              .white,
+                                                                          fontSize:
+                                                                              20),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          right:
+                                                                              15),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .info_outline,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 15,
+                                                                        left:
+                                                                            15),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceBetween,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Text(
+                                                                      'Share',
+                                                                      style: TextStyle(
+                                                                          color: Colors
+                                                                              .white,
+                                                                          fontSize:
+                                                                              20),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          right:
+                                                                              15),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .share,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 15,
+                                                                        left:
+                                                                            15),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceBetween,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Text(
+                                                                      'Add to favourites',
+                                                                      style: TextStyle(
+                                                                          color: Colors
+                                                                              .white,
+                                                                          fontSize:
+                                                                              20),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          right:
+                                                                              15),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .favorite_outline,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 15,
+                                                                        left:
+                                                                            15),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceBetween,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Text(
+                                                                      'Copy link',
+                                                                      style: TextStyle(
+                                                                          color: Colors
+                                                                              .white,
+                                                                          fontSize:
+                                                                              20),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding: const EdgeInsets
+                                                                              .only(
+                                                                          right:
+                                                                              15),
+                                                                      child:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .copy,
+                                                                        color: Colors
+                                                                            .white,
+                                                                      ),
+                                                                    )
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )));
+                                            }),
+                                            icon: Icon(
+                                              Icons.more_horiz,
+                                              color: Color(0xffE3E3E3),
+                                            ),
+                                          ))
                                     ],
                                   ),
                                 )

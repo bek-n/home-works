@@ -13,6 +13,7 @@ class LoginPage extends StatefulWidget {
 
 TextEditingController name = TextEditingController();
 TextEditingController email = TextEditingController();
+TextEditingController acc = TextEditingController();
 
 bool isPasswordVisible = false;
 bool isEmpty = false;
@@ -230,6 +231,7 @@ class _LoginPageState extends State<LoginPage> {
                               builder: ((context) => ProfilePage(
                                     Name: name.text,
                                     Email: email.text,
+                                    Account: acc.text,
                                   ))));
                     } else {
                       isEmpty = true;
@@ -273,7 +275,11 @@ class _LoginPageState extends State<LoginPage> {
                             context,
                             MaterialPageRoute(
                                 builder: ((context) => ProfilePage(
-                                    Email: 'Google', Name: 'Google Account'))));
+                                      Email: 'Google',
+                                      Name: 'Google Account',
+                                      Account:
+                                          'https://e7.pngegg.com/pngimages/715/371/png-clipart-youtube-google-logo-google-s-google-account-youtube-text-trademark.png',
+                                    ))));
                       },
                       child: Image.asset(
                         'assets/google.png',
@@ -289,7 +295,11 @@ class _LoginPageState extends State<LoginPage> {
                               context,
                               MaterialPageRoute(
                                   builder: ((context) => ProfilePage(
-                                      Email: 'Apple', Name: 'Apple Account'))));
+                                        Email: 'Apple',
+                                        Name: 'Apple Account',
+                                        Account:
+                                            'https://cdn.imgbin.com/10/12/5/imgbin-apple-logo-business-apple-6k5cxtDLxhLzBPPpPbjJcC7W9.jpg',
+                                      ))));
                         },
                         child: Image.asset(
                           'assets/apple.png',

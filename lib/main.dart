@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '2 december. Spotify/Login Page.dart';
+import '7 december/onepage.dart';
 
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: detailsPage()
-      home: LoginPage(),
+      home: OnePage(),
     );
   }
 }
