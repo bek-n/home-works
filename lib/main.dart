@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '2 december. Spotify/Login Page.dart';
-import '7 december/onepage.dart';
+
+import '8 December. Life cicle/Splash screen.dart';
 
 
 void main() {
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: detailsPage()
-      home: OnePage(),
+     
+      home: SplashScreen(),
     );
   }
 }
