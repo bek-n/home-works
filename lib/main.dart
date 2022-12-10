@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-import '8 December. Life cicle/Splash screen.dart';
+import '8 December. Life cicle/2nd home work/1st screen.dart';
+import '8 December. Life cicle/1st home work/Splash screen.dart';
 
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      
-      home: SplashScreen(),
+      home: FirstScreen(),
     );
   }
 }
